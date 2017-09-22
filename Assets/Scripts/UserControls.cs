@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UserControls : MonoBehaviour {
-    public float maxTilt = 45f;
-    public float smooth = 0.5f;
+    private readonly float SMOOTH = 5f;
+    private readonly float MAX_TILT = 45f;
 
     // Use this for initialization
     void Start () {
@@ -16,7 +16,7 @@ public class UserControls : MonoBehaviour {
         float horizontal = Input.GetAxis("Horizontal") * -1;
         float vertical = Input.GetAxis("Vertical");
         Debug.Log("Horizontal = " + horizontal + "; Vertical = " + vertical);        
-        Quaternion target = Quaternion.Euler(maxTilt * vertical, 0, maxTilt * horizontal);
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+        Quaternion target = Quaternion.Euler(MAX_TILT * vertical, 0, MAX_TILT * horizontal);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * SMOOTH);
     }
 }
