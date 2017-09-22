@@ -15,7 +15,7 @@ public class UserControls : MonoBehaviour {
 	void Update () {
         float horizontal = Input.GetAxis("Horizontal") * -1;
         float vertical = Input.GetAxis("Vertical");
-        Debug.Log("Horizontal = " + horizontal + "; Vertical = " + vertical);        
+        //Debug.Log("Horizontal = " + horizontal + "; Vertical = " + vertical);        
         Quaternion target = Quaternion.Euler(MAX_TILT * vertical, 0, MAX_TILT * horizontal);
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * SMOOTH);
     }
