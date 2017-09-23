@@ -10,7 +10,6 @@ public class GoalLogic : MonoBehaviour {
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         { 
-            Destroy(gameObject);
             SceneManager.LoadScene("Finish");
         }
     }
