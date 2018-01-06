@@ -8,6 +8,7 @@ public class PhoneKeysController : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(transform.gameObject);
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     void Update()
