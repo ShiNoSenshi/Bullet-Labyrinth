@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UserControls : MonoBehaviour {
     private readonly float SMOOTH = 5f;
-    private readonly float MAX_TILT = 45f;
+    private readonly float MAX_TILT = 90f;
 
     // Use this for initialization
     void Start () {
